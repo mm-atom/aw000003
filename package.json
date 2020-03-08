@@ -1,6 +1,6 @@
 {
 	"name": "@mmstudio/aw000003",
-	"version": "1.0.202003081226",
+	"version": "1.0.202003081659",
 	"description": "ajax post",
 	"scripts": {
 		"test": "npm run build && karma start --single-run",
