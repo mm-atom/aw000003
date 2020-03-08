@@ -3,16 +3,21 @@ import global from '@mmstudio/global';
 function generate_request_url(url: string, query_param = {} as {
 	[key: string]: string;
 }) {
-	const usp = new URLSearchParams();
+	const [base, query] = url.split('?');
+
+	const usp = new URLSearchParams(query);
 	for (const k in query_param) {
-		usp.append(k, query_param[k]);
+		usp.set(k, query_param[k]);	// this will override query
 	}
-	const query = usp.toString();
+	// const query = usp.toString();
 	// const cacheBust = String(Date.now());
 	// query += query ? `&${cacheBust}` : cacheBust;
 
-	const separator = url.includes('?') ? '&' : '?';
-	return query ? url + separator + query : url;
+	const q = usp.toString();
+	if (q) {
+		return `${base}?${q}`;
+	}
+	return base;
 }
 
 export default async function post<T = object>(url: string, data?: string | FormData, query?: {

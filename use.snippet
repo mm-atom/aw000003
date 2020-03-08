@@ -1,6 +1,7 @@
 	// ajax post
 	const r$CURRENT_SECONDS_UNIX = await(() => {
-		const param1 = $1;	// 请求地址
-		const param2 = $2;	// 参数
-		return aw3(param1, param2)
+		const url = $1;	// 请求地址
+		const data = $2;	// 参数
+		const query = $3;	// 参数
+		return aw3<$4>(url, data, query)
 	})();
