@@ -1,7 +1,6 @@
-	// ajax post
-	const r$CURRENT_SECONDS_UNIX = await(() => {
-		const url = $1;	// 请求地址
-		const data = $2;	// 参数
-		const query = $3;	// 参数
-		return aw3<$4>(url, data, query);
+	// get url param
+	const r$CURRENT_SECONDS_UNIX = (() => {
+		const key = '$1';	// url参数名
+		const default_value = $2;	// 默认值,如果不希望使用默认值，可以删除该参数或者传入空值
+		return aw3(mm, key, default_value);
 	})();

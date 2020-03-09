@@ -1,10 +1,26 @@
 import { expect } from 'chai';
 import t from '../dist/index';
 
-describe('ajax', () => {
-	it('post', async () => {
-		window.host = 'http://127.0.0.1:8889';
-		const r = await t('test', { foo: 'bar' });
-		expect(r).eq('mmstudio');
+describe('get url param', () => {
+	it('without default', () => {
+		const mm = {
+			data: {
+				params: {
+					foo: 'bar'
+				}
+			}
+		};
+		const r = t(mm, 'foo', 'mmstudio');
+		expect(r).eq('bar');
+	});
+	it('with default', () => {
+		const mm = {
+			data: {
+				params: {
+				}
+			}
+		};
+		const r = t(mm, 'foo', 'bar');
+		expect(r).eq('bar');
 	});
 });

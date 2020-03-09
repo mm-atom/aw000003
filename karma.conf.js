@@ -3,7 +3,7 @@ module.exports = config => {
 		failOnEmptyTestSuite: false,	// see https://github.com/karma-runner/karma/issues/2528#issuecomment-519589053
 		frameworks: ['mocha', 'chai'],
 		files: [
-			'./tests/test.js'
+			'./tests/*.js'
 		],
 		browsers: ['ChromiumHeadless'],
 		preprocessors: {

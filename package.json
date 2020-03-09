@@ -1,7 +1,7 @@
 {
 	"name": "@mmstudio/aw000003",
 	"version": "1.0.202003081659",
-	"description": "ajax post",
+	"description": "获取地址栏参数值",
 	"scripts": {
 		"test": "npm run build && karma start --single-run",
 		"watch": "tsc -w & karma start",
@@ -39,10 +39,10 @@
 	],
 	"license": "MIT",
 	"peerDependencies": {
-		"@mmstudio/global": "*"
+		"@mmstudio/aw000001": "*"
 	},
 	"devDependencies": {
-		"@mmstudio/global": "latest",
+		"@mmstudio/aw000001": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
 		"chai": "latest",
