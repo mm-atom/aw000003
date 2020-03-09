@@ -1,6 +1,6 @@
 {
 	"name": "@mmstudio/aw000003",
-	"version": "1.0.202003081659",
+	"version": "1.0.202003091108",
 	"description": "获取地址栏参数值",
 	"scripts": {
 		"test": "npm run build && karma start --single-run",
